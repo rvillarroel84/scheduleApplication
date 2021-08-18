@@ -19,10 +19,30 @@
     <title><spring:message code="student.headerTitle" /> </title>
 </head>
 <body>
-<h1> <spring:message code="title" /> </h1>
 
 <div class="container">
-    <h1> <spring:message code="student.headerTitle" /> </h1>
+
+    <h1><spring:message code="menu.tituloApp" /></h1>
+
+    <ul class="nav">
+        <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="registration"><spring:message code="menu.register" /></a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="student"><spring:message code="menu.student" /></a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="class"><spring:message code="menu.class" /></a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+        </li>
+    </ul>
+
+    <h2> <spring:message code="student.headerTitle" /> </h2>
 
     <form:form modelAttribute="student">
         <div class="mb-3">

@@ -3,10 +3,7 @@ package com.rvillarroel.scheduleApplication.Repository;
 import com.rvillarroel.scheduleApplication.model.Student;
 import org.springframework.stereotype.Service;
 
-import java.util.Collection;
-import java.util.HashSet;
-import java.util.Optional;
-import java.util.Set;
+import java.util.*;
 
 @Service
 public class StudentRepository {
@@ -17,6 +14,7 @@ public class StudentRepository {
         return students;
     }
     public Student save(Student student){
+        student.setId(UUID.randomUUID().toString());
         students.add(student);
         return  student;
     }

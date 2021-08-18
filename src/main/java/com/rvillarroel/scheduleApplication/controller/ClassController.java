@@ -33,6 +33,14 @@ public class ClassController {
         return "redirect:class";
     }
 
+    @PostMapping(value = "/class/{id}/update")
+    public String addClass(@ModelAttribute("class") Class classes, Model model){
+
+        classService.updateClass(Optional.ofNullable(classes));
+
+        return "redirect:/class";
+    }
+
     @GetMapping(value = "/class/{id}/delete")
     public String deleteClass(@PathVariable String id){
 
@@ -45,13 +53,13 @@ public class ClassController {
     }
 
     @GetMapping(value = "/class/{id}/update")
-    public String deleteClass(@PathVariable String id, Model model){
+    public String updateClass(@ModelAttribute("class") Class classes, @PathVariable String id, Model model){
 
         Optional<Class> aClass = classService.findById(id);
         if (aClass.isPresent()) {
-            model.addAttribute("classe", aClass);
+            model.addAttribute("editClass", aClass);
         }
-        return "redirect:/classEdit";
+        return "/classEdit";
     }
 
 

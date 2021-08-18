@@ -22,21 +22,43 @@
 <body>
 
 <div class="container">
-    <h1> <spring:message code="class.headerTitle" /> </h1>
 
-    <form:form>
+
+    <h1><spring:message code="menu.tituloApp" /></h1>
+
+    <ul class="nav">
+        <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="registration"><spring:message code="menu.register" /></a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="student"><spring:message code="menu.student" /></a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="class"><spring:message code="menu.class" /></a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+        </li>
+    </ul>
+
+    <h2> <spring:message code="class.headerTitle" /> </h2>
+
+    <form:form modelAttribute="class">
         <div class="mb-3">
             <label for="InputClassCode" class="form-label"><spring:message code="class.code" /></label>
-            <form:input path="code" class="form-control" id="InputClassCode" aria-describedby="codelHelp" value="${classe.get().code}"/>
+            <form:input path="code" class="form-control" id="InputClassCode" aria-describedby="codelHelp" value="${editClass.get().code}"/>
             <div id="codeHelp" class="form-text">Insert a Class Code</div>
         </div>
         <div class="mb-3">
             <label for="InputTitle" class="form-label"><spring:message code="class.title" /></label>
-            <form:input path="title" class="form-control" id="InputTitle" value="${classe.get().title}"/>
+            <form:input path="title" class="form-control" id="InputTitle" value="${editClass.get().title}"/>
         </div>
         <div class="mb-3">
             <label for="InputDescription" class="form-label">  <spring:message code="class.description" /></label>
-            <form:input path="description" class="form-control" id="InputDescription" value="${classe.get().description}"/>
+            <form:input path="description" class="form-control" id="InputDescription" value="${editClass.get().description}"/>
         </div>
         <button type="submit" class="btn btn-primary">Submit</button>
     </form:form>

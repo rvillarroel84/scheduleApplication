@@ -6,6 +6,7 @@ import org.springframework.stereotype.Service;
 import java.util.HashSet;
 import java.util.Optional;
 import java.util.Set;
+import java.util.UUID;
 
 @Service
 public class ClassRepository {
@@ -17,6 +18,7 @@ public class ClassRepository {
     }
 
     public Class save(Class aClass){
+        aClass.setId(UUID.randomUUID().toString());
         classes.add(aClass);
         return  aClass;
     }
@@ -26,5 +28,12 @@ public class ClassRepository {
     }
     public boolean remove(Optional<Class> aClass){
         return classes.removeIf(aClass1 -> aClass1.getId().equals(aClass.get().getId()));
+    }
+    public boolean update(Optional<Class> aClass){
+
+        boolean removeItem =  classes.removeIf(aClass1 -> aClass1.getId().equals(aClass.get().getId()));
+        if (removeItem) classes.add(aClass.get());
+
+        return removeItem;
     }
 }

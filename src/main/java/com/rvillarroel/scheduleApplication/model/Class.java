@@ -25,7 +25,6 @@ public class Class {
         this.title = title;
         this.description = description;
     }
-
     public Class(String code, String title, String description) {
         this(UUID.randomUUID().toString(), code, title, description);
     }

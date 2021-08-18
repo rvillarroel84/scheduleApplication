@@ -11,4 +11,5 @@ public interface ClassService {
     Class addClass(Class aClass);
     boolean deleteClass(Optional<Class> aClass);
     Optional<Class> findById(String id);
+    boolean updateClass(Optional<Class> aClass);
 }

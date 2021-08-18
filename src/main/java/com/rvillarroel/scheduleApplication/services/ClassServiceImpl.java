@@ -35,4 +35,9 @@ public class ClassServiceImpl implements ClassService{
     public Optional<Class> findById(String id) {
         return classRepository.findById(id);
     }
+
+    @Override
+    public boolean updateClass(Optional<Class> aClass) {
+        return classRepository.update(aClass);
+    }
 }

@@ -28,7 +28,7 @@ public class BootStrapData implements CommandLineRunner {
     @Override
     public void run(String... args) throws Exception {
 
-        Student ronny = new Student("Ronny", "Villarroel");
+        Student ronny = new Student("Villarroel", "Ronny");
         Class springMVC = new Class("SPMVC", "Spring Framework 5: Beginner to Guru", "test");
         ronny.setAclass(springMVC);
         springMVC.getStudents().add(ronny);
@@ -37,7 +37,7 @@ public class BootStrapData implements CommandLineRunner {
         studentService.addStudent(ronny);
 
 
-        Student oliver = new Student("Oliver", "Villarroel");
+        Student oliver = new Student("Villarroel", "Oliver");
         Class agileClass = new Class("Agile", "Agile Framework: Beginner to Guru", "test");
         oliver.setAclass(agileClass);
         agileClass.getStudents().add(oliver);

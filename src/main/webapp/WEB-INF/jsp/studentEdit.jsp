@@ -1,8 +1,8 @@
 <%--
   Created by IntelliJ IDEA.
   User: rvillarroel
-  Date: 8/17/2021
-  Time: 8:06 PM
+  Date: 8/18/2021
+  Time: 4:16 PM
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
@@ -47,43 +47,28 @@
     <form:form modelAttribute="student">
         <div class="mb-3">
             <label for="InputStudentName" class="form-label"><spring:message code="student.firstname" /></label>
-            <form:input path="firstName"  class="form-control" id="InputStudentName" aria-describedby="codelHelp"/>
+            <form:input path="firstName"  class="form-control" id="InputStudentName" aria-describedby="codelHelp" value="${editStudent.get().firstName}"/>
             <div id="codeHelp" class="form-text">Insert a Class Code</div>
         </div>
         <div class="mb-3">
             <label for="InputStudentLastName" class="form-label"><spring:message code="student.lastname" /></label>
-            <form:input path="lastName" class="form-control" id="InputStudentLastName"/>
+            <form:input path="lastName" class="form-control" id="InputStudentLastName" value="${editStudent.get().lastName}"/>
         </div>
         <div class="mb-3">
             <label for="InputStudentClass" class="form-label">  <spring:message code="student.class" /></label>
-            <form:select path="aclass.id" items="${classList}" itemLabel="code" itemValue="title" class="form-select" id="InputStudentClass" />
+<%--        <form:select path="aclass.id" items="${classList}" itemLabel="code" itemValue="title" class="form-select" id="InputStudentClass" selected="${editStudent.get().aclass}" />--%>
+
+            <form:select path="aclass.id" name="class" id="InputStudentClass">
+                <c:forEach var="item" items="${classList}">
+                    <option value="${item.id}" ${item.id == selectedDept ? 'selected="selected"' : ''}>${item.title}</option>
+                </c:forEach>
+            </form:select>
+
+
         </div>
         <button type="submit" class="btn btn-primary">Submit</button>
     </form:form>
 
-
-    <table class="table">
-        <thead>
-        <tr>
-            <th scope="col"><spring:message code="student.firstname" /></th>
-            <th scope="col"><spring:message code="student.lastname" /></th>
-            <th scope="col"><spring:message code="student.class" /></th>
-            <th scope="col">Edit</th>
-            <th scope="col">Delete</th>
-        </tr>
-        </thead>
-        <tbody>
-        <c:forEach items="${studentList}" var="student">
-            <tr>
-                <td scope="row">${student.firstName}</td>
-                <td scope="row">${student.lastName}</td>
-                <td scope="row">${student.aclass.title}</td>
-                <td scope="row"><a href="student/${student.id}/update" class="btn btn-success">Edit</a> </td>
-                <td scope="row"><a href="student/${student.id}/delete" class="btn btn-danger">Delete</a> </td>
-            </tr>
-        </c:forEach>
-        </tbody>
-    </table>
 </div>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
 </body>

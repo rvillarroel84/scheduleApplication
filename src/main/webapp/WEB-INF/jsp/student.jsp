@@ -54,10 +54,10 @@
             <label for="InputStudentLastName" class="form-label"><spring:message code="student.lastname" /></label>
             <form:input path="lastName" class="form-control" id="InputStudentLastName"/>
         </div>
-        <div class="mb-3">
-            <label for="InputStudentClass" class="form-label">  <spring:message code="student.class" /></label>
-            <form:select path="aclass.id" items="${classList}" itemLabel="code" itemValue="title" class="form-select" id="InputStudentClass" />
-        </div>
+<%--        <div class="mb-3">--%>
+<%--            <label for="InputStudentClass" class="form-label">  <spring:message code="student.class" /></label>--%>
+<%--            <form:select path="classes" items="${classList}" itemLabel="code" itemValue="title" class="form-select" id="InputStudentClass" />--%>
+<%--        </div>--%>
         <button type="submit" class="btn btn-primary">Submit</button>
     </form:form>
 
@@ -67,7 +67,7 @@
         <tr>
             <th scope="col"><spring:message code="student.firstname" /></th>
             <th scope="col"><spring:message code="student.lastname" /></th>
-            <th scope="col"><spring:message code="student.class" /></th>
+<%--            <th scope="col"><spring:message code="student.class" /></th>--%>
             <th scope="col">Edit</th>
             <th scope="col">Delete</th>
         </tr>
@@ -77,7 +77,7 @@
             <tr>
                 <td scope="row">${student.firstName}</td>
                 <td scope="row">${student.lastName}</td>
-                <td scope="row">${student.aclass.title}</td>
+<%--                <td scope="row">${student.classes}</td>--%>
                 <td scope="row"><a href="student/${student.id}/update" class="btn btn-success">Edit</a> </td>
                 <td scope="row"><a href="student/${student.id}/delete" class="btn btn-danger">Delete</a> </td>
             </tr>

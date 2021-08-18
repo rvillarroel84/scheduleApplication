@@ -12,7 +12,8 @@ public class Student {
 
     private String lastName;
     private String firstName;
-    private Class aclass;
+
+    private Set<Class> classes = new HashSet<>();;
 
 
     public Student() {
@@ -52,12 +53,12 @@ public class Student {
         this.firstName = firstName;
     }
 
-    public Class getAclass() {
-        return aclass;
+    public Set<Class> getClasses() {
+        return classes;
     }
 
-    public void setAclass(Class aclass) {
-        this.aclass = aclass;
+    public void setClasses(Set<Class> classes) {
+        this.classes = classes;
     }
 
     @Override

@@ -54,18 +54,18 @@
             <label for="InputStudentLastName" class="form-label"><spring:message code="student.lastname" /></label>
             <form:input path="lastName" class="form-control" id="InputStudentLastName" value="${editStudent.get().lastName}"/>
         </div>
-        <div class="mb-3">
-            <label for="InputStudentClass" class="form-label">  <spring:message code="student.class" /></label>
-<%--        <form:select path="aclass.id" items="${classList}" itemLabel="code" itemValue="title" class="form-select" id="InputStudentClass" selected="${editStudent.get().aclass}" />--%>
+<%--        <div class="mb-3">--%>
+<%--            <label for="InputStudentClass" class="form-label">  <spring:message code="student.class" /></label>--%>
+<%--&lt;%&ndash;        <form:select path="aclass.id" items="${classList}" itemLabel="code" itemValue="title" class="form-select" id="InputStudentClass" selected="${editStudent.get().aclass}" />&ndash;%&gt;--%>
 
-            <form:select path="aclass.id" name="class" id="InputStudentClass">
-                <c:forEach var="item" items="${classList}">
-                    <option value="${item.id}" ${item.id == selectedDept ? 'selected="selected"' : ''}>${item.title}</option>
-                </c:forEach>
-            </form:select>
+<%--            <form:select path="aclass.id" name="class" id="InputStudentClass">--%>
+<%--                <c:forEach var="item" items="${classList}">--%>
+<%--                    <option value="${item.id}" ${item.id == selectedDept ? 'selected="selected"' : ''}>${item.title}</option>--%>
+<%--                </c:forEach>--%>
+<%--            </form:select>--%>
 
 
-        </div>
+<%--        </div>--%>
         <button type="submit" class="btn btn-primary">Submit</button>
     </form:form>
 

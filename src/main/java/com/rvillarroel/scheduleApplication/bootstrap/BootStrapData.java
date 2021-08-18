@@ -30,8 +30,15 @@ public class BootStrapData implements CommandLineRunner {
 
         Student ronny = new Student("Villarroel", "Ronny");
         Class springMVC = new Class("SPMVC", "Spring Framework 5: Beginner to Guru", "test");
-        ronny.setAclass(springMVC);
+        ronny.getClasses().add(springMVC);
         springMVC.getStudents().add(ronny);
+
+        classService.addClass(springMVC);
+        studentService.addStudent(ronny);
+
+        Student rolando = new Student("Cardozo", "Rolando");
+        rolando.getClasses().add(springMVC);
+        springMVC.getStudents().add(rolando);
 
         classService.addClass(springMVC);
         studentService.addStudent(ronny);
@@ -39,7 +46,7 @@ public class BootStrapData implements CommandLineRunner {
 
         Student oliver = new Student("Villarroel", "Oliver");
         Class agileClass = new Class("Agile", "Agile Framework: Beginner to Guru", "test");
-        oliver.setAclass(agileClass);
+        oliver.getClasses().add(agileClass);
         agileClass.getStudents().add(oliver);
 
         classService.addClass(agileClass);
@@ -49,15 +56,7 @@ public class BootStrapData implements CommandLineRunner {
         System.out.println("Number of classes: " + oliver.getClass());
 
 
-        Set<Class> classSet = new HashSet<>();
 
-        classSet.add(agileClass);
-        classSet.add(springMVC);
-
-        Optional<Class> findClass = classSet.stream()
-                .filter(aClass -> aClass.getId().equals(agileClass.getId())).findFirst();
-
-        System.out.println(findClass.get().getTitle());
 
     }
 }

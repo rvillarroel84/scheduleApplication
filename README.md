@@ -13,12 +13,12 @@ Schedule Applicatcion for student Registrations
      - tomcat 9
 3.	(optional) deployable/runnable war/jar
 
-    $ git clone https://github.com/rvillarroel84/scheduleApplication.git
-    $ cd scheduleApplication
-    $ mvn package
-    $ copy scheduleApplication/target/scheduleApplication-0.0.1-SNAPSHOT.war $TOMCAT/webapps/
-    $ start Tomcat
-    $ localhost:8080/scheduleApplication
+    - $ git clone https://github.com/rvillarroel84/scheduleApplication.git
+    - $ cd scheduleApplication
+    - $ mvn package
+    - $ copy scheduleApplication/target/scheduleApplication-0.0.1-SNAPSHOT.war $TOMCAT/webapps/
+    - $ start Tomcat
+    - $ localhost:8080/scheduleApplication
   
 
 4.	(optional) Implementation documentation

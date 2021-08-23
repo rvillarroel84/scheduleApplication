@@ -1,6 +1,6 @@
-# scheduleApplication
-Schedule Applicatcion for student Registrations
+# Schedule Application
 
+Student and Class Registrations app
 
 1.	(required) java code via a GitHub repository.
      - You are on the repo.

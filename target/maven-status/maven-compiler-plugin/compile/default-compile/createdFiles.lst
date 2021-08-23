@@ -1,0 +1,13 @@
+com\rvillarroel\scheduleApplication\ScheduleApplication.class
+com\rvillarroel\scheduleApplication\services\StudentService.class
+com\rvillarroel\scheduleApplication\services\StudentServiceImpl.class
+com\rvillarroel\scheduleApplication\Repository\StudentRepository.class
+com\rvillarroel\scheduleApplication\ScheduleApplicationConfig.class
+com\rvillarroel\scheduleApplication\controller\ClassController.class
+com\rvillarroel\scheduleApplication\bootstrap\BootStrapData.class
+com\rvillarroel\scheduleApplication\Repository\ClassRepository.class
+com\rvillarroel\scheduleApplication\services\ClassServiceImpl.class
+com\rvillarroel\scheduleApplication\controller\StudentController.class
+com\rvillarroel\scheduleApplication\model\Student.class
+com\rvillarroel\scheduleApplication\model\Class.class
+com\rvillarroel\scheduleApplication\services\ClassService.class

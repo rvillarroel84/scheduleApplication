@@ -14,6 +14,7 @@ public class StudentRepository {
     public Set<Student> getAll(){
         return students;
     }
+
     public Student save(Student student){
         student.setId(UUID.randomUUID().toString());
         students.add(student);

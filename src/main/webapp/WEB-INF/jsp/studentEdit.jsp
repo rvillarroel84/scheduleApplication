@@ -1,7 +1,7 @@
 <%--
   Created by IntelliJ IDEA.
   User: rvillarroel
-  Date: 8/18/2021
+  Date: 8/21/2021
   Time: 4:16 PM
   To change this template use File | Settings | File Templates.
 --%>
@@ -26,19 +26,13 @@
 
     <ul class="nav">
         <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
+            <a class="nav-link" aria-current="page" href="#">Home</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="registration"><spring:message code="menu.register" /></a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="student"><spring:message code="menu.student" /></a>
+            <a class="nav-link active" href="student"><spring:message code="menu.student" /></a>
         </li>
         <li class="nav-item">
             <a class="nav-link" href="class"><spring:message code="menu.class" /></a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
         </li>
     </ul>
 
@@ -54,18 +48,6 @@
             <label for="InputStudentLastName" class="form-label"><spring:message code="student.lastname" /></label>
             <form:input path="lastName" class="form-control" id="InputStudentLastName" value="${editStudent.get().lastName}"/>
         </div>
-<%--        <div class="mb-3">--%>
-<%--            <label for="InputStudentClass" class="form-label">  <spring:message code="student.class" /></label>--%>
-<%--&lt;%&ndash;        <form:select path="aclass.id" items="${classList}" itemLabel="code" itemValue="title" class="form-select" id="InputStudentClass" selected="${editStudent.get().aclass}" />&ndash;%&gt;--%>
-
-<%--            <form:select path="aclass.id" name="class" id="InputStudentClass">--%>
-<%--                <c:forEach var="item" items="${classList}">--%>
-<%--                    <option value="${item.id}" ${item.id == selectedDept ? 'selected="selected"' : ''}>${item.title}</option>--%>
-<%--                </c:forEach>--%>
-<%--            </form:select>--%>
-
-
-<%--        </div>--%>
         <button type="submit" class="btn btn-primary">Submit</button>
     </form:form>
 

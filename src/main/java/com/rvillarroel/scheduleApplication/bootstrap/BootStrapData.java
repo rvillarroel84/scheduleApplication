@@ -30,30 +30,30 @@ public class BootStrapData implements CommandLineRunner {
 
         Student ronny = new Student("Villarroel", "Ronny");
         Class springMVC = new Class("SPMVC", "Spring Framework 5: Beginner to Guru", "test");
-        ronny.getClasses().add(springMVC);
-        springMVC.getStudents().add(ronny);
+//        ronny.getClasses().add(springMVC);
+//        springMVC.getStudents().add(ronny);
 
         classService.addClass(springMVC);
         studentService.addStudent(ronny);
 
         Student rolando = new Student("Cardozo", "Rolando");
-        rolando.getClasses().add(springMVC);
-        springMVC.getStudents().add(rolando);
+//        rolando.getClasses().add(springMVC);
+//        springMVC.getStudents().add(rolando);
 
-        classService.addClass(springMVC);
-        studentService.addStudent(ronny);
+//        classService.addClass(springMVC);
+//        studentService.addStudent(ronny);
 
 
         Student oliver = new Student("Villarroel", "Oliver");
         Class agileClass = new Class("Agile", "Agile Framework: Beginner to Guru", "test");
-        oliver.getClasses().add(agileClass);
-        agileClass.getStudents().add(oliver);
+//        oliver.getClasses().add(agileClass);
+//        agileClass.getStudents().add(oliver);
 
         classService.addClass(agileClass);
         studentService.addStudent(oliver);
 
         System.out.println("Started in Bootstrap");
-        System.out.println("Number of classes: " + oliver.getClass());
+//        System.out.println("Number of classes: " + oliver.getClass());
 
 
 

@@ -6,6 +6,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.Collection;
 import java.util.Optional;
+import java.util.Set;
 
 @Service
 public class ClassServiceImpl implements ClassService{
@@ -17,7 +18,7 @@ public class ClassServiceImpl implements ClassService{
     }
 
     @Override
-    public Collection<Class> getClasses() {
+    public Set<Class> getClasses() {
         return classRepository.getAll();
     }
 

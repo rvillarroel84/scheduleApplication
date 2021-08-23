@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.Collection;
 import java.util.Optional;
+import java.util.Set;
 
 @Service
 public class StudentServiceImpl implements StudentService{
@@ -18,7 +19,7 @@ public class StudentServiceImpl implements StudentService{
     }
 
     @Override
-    public Collection<Student> getAll() {
+    public Set<Student> getAll() {
         return studentRepository.getAll();
     }
 

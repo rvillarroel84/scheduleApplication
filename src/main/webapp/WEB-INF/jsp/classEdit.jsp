@@ -1,7 +1,7 @@
 <%--
   Created by IntelliJ IDEA.
   User: rvillarroel
-  Date: 8/17/2021
+  Date: 8/21/2021
   Time: 8:26 PM
   To change this template use File | Settings | File Templates.
 --%>
@@ -28,19 +28,13 @@
 
     <ul class="nav">
         <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="registration"><spring:message code="menu.register" /></a>
+            <a class="nav-link" aria-current="page" href="#">Home</a>
         </li>
         <li class="nav-item">
             <a class="nav-link" href="student"><spring:message code="menu.student" /></a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="class"><spring:message code="menu.class" /></a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+            <a class="nav-link active" href="class"><spring:message code="menu.class" /></a>
         </li>
     </ul>
 

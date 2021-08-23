@@ -1,7 +1,7 @@
 <%--
   Created by IntelliJ IDEA.
   User: rvillarroel
-  Date: 8/17/2021
+  Date: 8/21/2021
   Time: 8:26 PM
   To change this template use File | Settings | File Templates.
 --%>
@@ -20,28 +20,18 @@
     <title>Register Class</title>
 </head>
 <body>
-
-
-
-
 <div class="container">
     <h1><spring:message code="menu.tituloApp" /></h1>
 
     <ul class="nav">
         <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="registration"><spring:message code="menu.register" /></a>
+            <a class="nav-link" aria-current="page" href="#">Home</a>
         </li>
         <li class="nav-item">
             <a class="nav-link" href="student"><spring:message code="menu.student" /></a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="class"><spring:message code="menu.class" /></a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+            <a class="nav-link active" href="class"><spring:message code="menu.class" /></a>
         </li>
     </ul>
 <h2> <spring:message code="class.headerTitle" /> </h2>
@@ -64,6 +54,11 @@
     </form:form>
 
 
+    <form:form modelAttribute="class" method="get" action="class/search" class="d-flex">
+        <form:input path="code" class="form-control me-2" placeholder="Search" aria-label="Search"/>
+        <button type="submit" class="btn btn-outline-success">Search</button>
+    </form:form>
+
 
     <table class="table">
         <thead>
@@ -73,6 +68,7 @@
             <th scope="col"><spring:message code="class.description" /></th>
             <th scope="col">Edit</th>
             <th scope="col">Delete</th>
+            <th scope="col">Registered</th>
         </tr>
         </thead>
         <tbody>
@@ -83,6 +79,7 @@
                 <td scope="row">${classe.description}</td>
                 <td scope="row"><a href="class/${classe.id}/update" class="btn btn-success">Edit</a> </td>
                 <td scope="row"><a href="class/${classe.id}/delete" class="btn btn-danger">Delete</a> </td>
+                <td scope="row"><a href="class/${classe.id}/students" class="btn btn-info">Students</a> </td>
             </tr>
         </c:forEach>
         </tbody>
